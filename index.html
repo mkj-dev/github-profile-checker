@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Checker</title>
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 class="app-title">{{ title }}</h1>
+    </div>
+
+<script>
+    // Create and mount the app
+    const app = Vue.createApp({
+        data() {
+            return {
+                title: 'GitHub Profile Checker'
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+</body>
+</html>
