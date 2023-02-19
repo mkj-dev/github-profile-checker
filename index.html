@@ -12,10 +12,14 @@
 <body>
     <div id="app">
         <h1 class="app-title">{{ title }}</h1>
+        <search-bar></search-bar>
     </div>
 
+<!-- Import components -->
+<script src="./components/SearchBar.js"></script>
+
+<!-- Create and mount the app -->
 <script>
-    // Create and mount the app
     const app = Vue.createApp({
         data() {
             return {
@@ -23,6 +27,8 @@
             }
         }
     });
+    // Search Bar component
+    app.component('search-bar', searchBar);
     app.mount('#app');
 </script>
 </body>
