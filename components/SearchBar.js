@@ -33,8 +33,11 @@ const searchBar = {
     template:
     /* html*/
     `<div>
-        <input type="text" id="search-bar" placeholder="Github profile name">
-        <button type="button" id="search-button" @click="getProfileData">Search</button>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Github profile name">
+            <button type="button" id="search-button" @click="getProfileData">Search</button>
+        </div>
+        
         <profile-data
             :login="login"
             :name="name"
