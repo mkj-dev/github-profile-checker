@@ -29,18 +29,18 @@ const profileData = {
     },
     template:
     /*html*/
-    `<div id="profile-data">
-        <div class="profile-info">
-            <img :src="avatar_url">
-            <h2>{{ login }}</h2>
-            <h2>{{ name }}</h2>
-            <p>Location: {{ location }}</p>
-            <a :href="html_url" target="_blank">Profile link</a>
+    `<img id="profile-avatar" :src="avatar_url">
+    <a :href="html_url" target="_blank" id="profile-link">{{ login }} profile link</a>
+    <div id="profile-data">
+        <div id="profile-info">
+            <h3><span>Username:</span> {{ login }}</h3>
+            <h3><span>Fullname:</span> {{ name }}</h3>
+            <h3><span>Location:</span> {{ location }}</h3>
         </div>
-        <div class="github-stats">
-            <p>Public repositories: {{ public_repos }}</p>
-            <p>Followers: {{ followers }}</p>
-            <p>Following: {{ following }}</p>
+        <div id="github-stats">
+            <h3><span>Public repositories:</span> {{ public_repos }}</h3>
+            <h3><span>Followers:</span> {{ followers }}</h3>
+            <h3><span>Following:</span> {{ following }}</h3>
         </div>
     </div>`
 }
