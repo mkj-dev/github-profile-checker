@@ -6,14 +6,18 @@ html, body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 
+body {
+    background: #1d3557
+}
+
 /* APP */
 #app {
     text-align: center;
+    color: #f1faee
 }
 
 #app .app-title {
     margin: 2.5rem;
-    color: #6866ec;
 }
 
 /* SEARCH BAR */
@@ -32,6 +36,10 @@ html, body {
 #search-button {
     margin-left: .25rem;
     width: 100px;
+    text-transform: uppercase;
+    background-color: #e63946;
+    color: #f1faee;
+    border: transparent;
 }
 
 /* PROFILE AVATAR */
@@ -46,7 +54,11 @@ html, body {
 /* GITHUB PROFILE LINK */
 #profile-link {
     font-size: 1.25rem;
-    color: #6866ec;
+    color: #e63946;
+}
+
+#profile-link:hover {
+    color: #f1faee;
 }
 
 /* PROFILE DATA */
@@ -60,7 +72,8 @@ html, body {
 
 #profile-info span,
 #github-stats span {
-    color: #6866ec;
+    color: #e63946;
+
 }
 
 /* ERROR */
