@@ -87,6 +87,38 @@ body {
 
 }
 
+/* REPOSITORIES DATA */
+#repos-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #f1faee;
+}
+
+.repo-container {
+    margin: 1rem auto;
+    padding: 1.25rem;
+    width: 400px;
+    background-color: #e63946;
+}
+
+.repo-container span {
+    color: #1d3557;
+    font-weight: 600;
+}
+
+.repo-container a {
+    color: #1d3557;
+}
+
+.repo-container a:hover {
+    color: #f1faee;
+}
+
+.repo-container p {
+    word-wrap: break-word;
+}
+
 /* ERROR */
 .error {
     color: #fd0000;
