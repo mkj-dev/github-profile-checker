@@ -8,7 +8,8 @@ const searchBar = {
             location: '',
             public_repos: 0,
             followers: 0,
-            following: 0
+            following: 0,
+            error: ''
         }
     },
     methods: {
@@ -18,6 +19,9 @@ const searchBar = {
             fetch(`https://api.github.com/users/${username}`)
                 .then(response => response.json())
                 .then(data => {
+                    if (data['message'] === 'Not Found') {
+                        this.error = 'Username not found, try again.';
+                    }
                     this.login = data['login'];
                     this.name = data['name'];
                     this.avatar_url = data['avatar_url'];
@@ -26,9 +30,10 @@ const searchBar = {
                     this.public_repos = data['public_repos'];
                     this.followers = data['followers'];
                     this.following = data['following'];
+                    searchBar.value = '';
                 });
-            
-        }
+                this.error = '';
+            }
     },
     template:
     /* html*/
@@ -38,7 +43,9 @@ const searchBar = {
             <button type="button" id="search-button" @click="getProfileData">Search</button>
         </div>
         
-        <profile-data
+        <h2 v-if="error.length > 0" class="error">{{ error }}</h2>
+        <profile-data 
+            v-else-if="html_url.length"
             :login="login"
             :name="name"
             :avatar_url="avatar_url"
