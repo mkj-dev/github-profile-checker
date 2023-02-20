@@ -62,3 +62,8 @@ html, body {
 #github-stats span {
     color: #6866ec;
 }
+
+/* ERROR */
+.error {
+    color: #fd0000;
+}
