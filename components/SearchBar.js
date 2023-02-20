@@ -9,7 +9,7 @@ const searchBar = {
             public_repos: 0,
             followers: 0,
             following: 0,
-            error: ''
+            error: '',
         }
     },
     methods: {
@@ -30,17 +30,17 @@ const searchBar = {
                     this.public_repos = data['public_repos'];
                     this.followers = data['followers'];
                     this.following = data['following'];
-                    searchBar.value = '';
                 });
+                searchBar.value = '';
                 this.error = '';
-            }
+        }
     },
     template:
     /* html*/
     `<div>
         <div id="search-container">
             <input type="text" id="search-bar" placeholder="Github profile name">
-            <button type="button" id="search-button" @click="getProfileData">Search</button>
+            <button type="button" class="button search-button" @click="getProfileData">Search</button>
         </div>
         
         <h2 v-if="error.length > 0" class="error">{{ error }}</h2>
@@ -56,5 +56,6 @@ const searchBar = {
             :following="following"
         >
         </profile-data>
+        <repository-data :profile_name="login"></repository-data>
     </div>`
 };
