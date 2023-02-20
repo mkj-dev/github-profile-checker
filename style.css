@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+/* APP */
+#app {
+    text-align: center;
+}
+
+#app .app-title {
+    margin: 2.5rem;
+    color: #6866ec;
+}
+
+/* SEARCH BAR */
+#search-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 600px;
+    justify-content: center;
+}
+
+#search-bar {
+    padding: .75rem;
+    width: 60%;
+}
+
+#search-button {
+    margin-left: .25rem;
+    width: 100px;
+}
+
+/* PROFILE AVATAR */
+#profile-avatar {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 50%;
+}
+
+/* GITHUB PROFILE LINK */
+#profile-link {
+    font-size: 1.25rem;
+    color: #6866ec;
+}
+
+/* PROFILE DATA */
+#profile-data {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem;
+    gap: 4rem;
+}
+
+#profile-info span,
+#github-stats span {
+    color: #6866ec;
+}
