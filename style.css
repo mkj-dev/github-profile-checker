@@ -31,15 +31,26 @@ body {
 #search-bar {
     padding: .75rem;
     width: 60%;
+    border: transparent;
 }
 
-#search-button {
-    margin-left: .25rem;
-    width: 100px;
+/* BUTTONS */
+.button {
+    width: 8rem;
+    height: 2.75rem;
     text-transform: uppercase;
     background-color: #e63946;
     color: #f1faee;
     border: transparent;
+    cursor: pointer;
+}
+
+.button.search-button {
+    margin-left: .25rem;
+}
+
+.button.repos-button {
+    margin: 4rem;
 }
 
 /* PROFILE AVATAR */
