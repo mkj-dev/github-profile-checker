@@ -8,7 +8,7 @@
     <!-- CSS styles -->
     <link rel="stylesheet" href="style.css">
     <!-- Vue 3 -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +16,9 @@
         <h1 class="app-title">{{ title }}</h1>
         <search-bar></search-bar>
     </div>
-
+<footer>
+    <p>&copy; <a href="https://github.com/mkj-dev" target="_blank">github.com/mkj-dev</a></p>
+</footer>
 <!-- Import components -->
 <script src="./components/SearchBar.js"></script>
 <script src="./components/ProfileData.js"></script>
