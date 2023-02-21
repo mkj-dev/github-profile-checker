@@ -36,8 +36,9 @@ body {
 
 /* BUTTONS */
 .button {
-    width: 8rem;
+    width: fit-content;
     height: 2.75rem;
+    padding: .75rem;
     text-transform: uppercase;
     background-color: #e63946;
     color: #f1faee;
@@ -49,8 +50,19 @@ body {
     margin-left: .25rem;
 }
 
+#repos-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#repos-button-wrapper small span {
+    color: #e63946;
+}
+
 .button.repos-button {
-    margin: 4rem;
+    margin: 1.25rem 1.25rem .5rem 1.25rem;
 }
 
 /* PROFILE AVATAR */
@@ -76,7 +88,7 @@ body {
 #profile-data {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 2rem;
     gap: 4rem;
 }
@@ -122,4 +134,15 @@ body {
 /* ERROR */
 .error {
     color: #fd0000;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #profile-data {
+        flex-direction: column;
+    }
+
+    .repo-container {
+        max-width: 200px;
+    }
 }
