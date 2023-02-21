@@ -13,7 +13,8 @@ body {
 /* APP */
 #app {
     text-align: center;
-    color: #f1faee
+    color: #f1faee;
+    min-height: 100%;
 }
 
 #app .app-title {
@@ -105,6 +106,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     color: #f1faee;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .repo-container {
@@ -134,6 +137,25 @@ body {
 /* ERROR */
 .error {
     color: #fd0000;
+}
+
+/* FOOTER */
+footer {
+    height: 3rem;
+    background-color: #e63946;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.25rem;
+    color: #f1faee;
+}
+
+footer a {
+    margin: 0 auto;
+    color: #f1faee;
 }
 
 /* Extra small devices (phones, 600px and down) */
