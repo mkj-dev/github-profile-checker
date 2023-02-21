@@ -12,7 +12,7 @@ const repositoryData = {
     },
     methods: {
         getRepos(profileName) {
-            fetch(`https://api.github.com/users/${profileName}/repos`)
+            fetch(`https://api.github.com/users/${profileName}/repos?per_page=12`)
                 .then(response => response.json())
                 .then(data => {
                     for (d of data) {
@@ -30,7 +30,11 @@ const repositoryData = {
     },
     template:
     /*html*/
-    `<button type="button" class="button repos-button" @click="getRepos(profile_name)">Get Repos</button>
+    `
+    <div id="repos-button-wrapper" v-if="profile_name !== ''">
+        <button type="button" class="button repos-button" @click="getRepos(profile_name)">Get repos</button>
+        <small>Get the first 12 <span>{{ profile_name }}</span> repositories</small>
+    </div>
     <div id="repos-data">
         <div class="repo-container" v-for="repo in repos">
             <p><span>Project name:</span> {{ repo['repo_name'] }}</p>
